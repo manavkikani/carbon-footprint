@@ -21,7 +21,7 @@ const FootprintCanvas: React.FC<{ blurMap?: boolean }> = ({ blurMap = false }) =
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new Image();
       const frameNum = i.toString().padStart(3, '0');
-      img.src = `/carbon-frames/ezgif-frame-${frameNum}.jpg`;
+      img.src = `${import.meta.env.BASE_URL}carbon-frames/ezgif-frame-${frameNum}.jpg`;
       img.onload = () => {
         loadedCount++;
         loadedImages[i - 1] = img;
