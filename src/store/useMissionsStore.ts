@@ -27,7 +27,7 @@ const missionPool = [
   { title: "Zero waste day", description: "Avoid producing any non-recyclable waste today.", co2Reduction: 3.0, points: 100, difficulty: "Hard" },
 ];
 
-export const useMissionsStore = create<MissionsState>((set, get) => ({
+export const useMissionsStore = create<MissionsState>((set) => ({
   missions: [],
   streak: 0,
   totalPoints: 0,

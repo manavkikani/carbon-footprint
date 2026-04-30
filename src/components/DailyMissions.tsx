@@ -14,7 +14,7 @@ const DailyMissions: React.FC = () => {
     }
   }, [missions, generateMissions]);
 
-  const handleComplete = (id: string, reduction: number, points: number) => {
+  const handleComplete = (id: string, reduction: number) => {
     completeMission(id);
     applySimulation(reduction, `Completed Mission`);
     triggerBurst(); // Connects mission to particle animation
@@ -85,7 +85,7 @@ const DailyMissions: React.FC = () => {
               whileHover={{ scale: mission.completed ? 1 : 1.05 }}
               whileTap={{ scale: mission.completed ? 1 : 0.95 }}
               disabled={mission.completed}
-              onClick={() => handleComplete(mission.id, mission.co2Reduction, mission.points)}
+              onClick={() => handleComplete(mission.id, mission.co2Reduction)}
               style={{
                 width: '120px',
                 height: '44px',

@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
@@ -33,7 +33,7 @@ const ProtectedRoute = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<LandingPage />} />
@@ -56,7 +56,7 @@ function App() {
           <Route path="/onboarding" element={<OnboardingPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
